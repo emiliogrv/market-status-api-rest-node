@@ -1,0 +1,104 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "globals": {},
+  "env": {
+    "commonjs": true,
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["@typescript-eslint", "sort-keys-fix", "sort-class-members"],
+  // add your custom rules here
+  "rules": {
+    "block-spacing": ["error", "always"],
+    "camelcase": 2,
+    "comma-dangle": ["error", "never"],
+    "dot-location": ["error", "property"],
+    "eqeqeq": ["error", "always"],
+    "jsx-quotes": ["error", "prefer-double"],
+    "key-spacing": 2,
+    "keyword-spacing": 2,
+    "lines-between-class-members": ["error", "always"],
+    "no-alert": 0,
+    "no-console": 2,
+    "no-const-assign": 2,
+    "no-debugger": 2,
+    "no-dupe-args": 2,
+    "no-dupe-else-if": 2,
+    "no-dupe-keys": 2,
+    "no-empty-pattern": 2,
+    "no-eq-null": 2,
+    "no-irregular-whitespace": 2,
+    "no-mixed-operators": 2,
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxEOF": 1
+      }
+    ],
+    "no-trailing-spaces": 2,
+    "no-unreachable": 2,
+    "no-unused-vars": 0,
+    "no-var": 2,
+    "object-property-newline": 2,
+    "padded-blocks": ["error", "never"],
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      },
+      {
+        "blankLine": "always",
+        "prev": ["import"],
+        "next": ["const", "let", "var", "export"]
+      }
+    ],
+    "prefer-const": 2,
+    "prefer-object-spread": 2,
+    "quotes": ["error", "single"],
+    "semi": ["error", "never"],
+    "sort-class-members/sort-class-members": [
+      2,
+      {
+        "order": [
+          "[static-properties]",
+          "[static-methods]",
+          "[properties]",
+          "[conventional-private-properties]",
+          "constructor",
+          "[methods]",
+          "[conventional-private-methods]"
+        ],
+        "accessorPairPositioning": "getThenSet"
+      }
+    ],
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "@typescript-eslint/no-unused-vars": 2
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "excludedFiles": "*.test.js",
+      "rules": {
+        "no-unused-vars": 2
+      }
+    }
+  ]
+}

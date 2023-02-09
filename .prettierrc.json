@@ -1,0 +1,27 @@
+{
+  "arrowParens": "always",
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "semi": false,
+  "singleAttributePerLine": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": false,
+  "importOrder": [
+    ".*/__mocks__*",
+    ".*/__tests__*",
+    ".*/server*",
+    ".*/config*",
+    ".*/tool*",
+    ".*/service*",
+    ".*/route*",
+    ".*/middleware*",
+    ".*/validation*",
+    ".*/controller*",
+    ".*/entities*",
+    "^[./]"
+  ],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": false
+}
